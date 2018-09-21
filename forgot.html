@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forgot</title>
+     <link rel="stylesheet" href="./node_modules/bulma/css/bulma.css">
+</head>
+<body>
+    <section class="hero is-primary">
+  <div class="hero-body">
+      <center>
+        <div class="container">
+      <h1 class="title">
+            Forgot Password
+      </h1>
+      
+    </div>
+  </div>
+      </center>
+    
+</section>
+     <br>
+        <section>
+            <div class="container ">
+            
+                    <div class="columns is-centered">
+                            <div class="column is-two-fifths">
+                                <br><br>
+                                   <div id="noti" >
+                                        
+                                    </div>
+                                    <div class="field">
+                                            <p id="warning" style="color:red">  <p id="warning2" style="color:red"> </p></p>
+                                            <label class="label">Confirm Email</label>
+                                           
+                                            <div class="control ">
+                                                    <input class="input" id="email"type="text" placeholder="Email" >
+                                              </div>
+                                               <div class="help is-danger" id="help-mail"></div>
+                                          </div>
+                                          
+                                            <div class="field is-grouped">
+                                                    <div class="control">
+                                                         <button class="button is-link " onclick="checkTrue()" >Confirm</button>
+                                                    </div>
+                                                     <div class="control">
+                                                           <a href="login.html"> <button class="button is-link" >Back</button></a>
+                                                    </div>
+                                                    </div>
+                                           
+                                
+                            </div>
+                        </div>
+            </div>
+           
+        </section>
+        <script>
+            var email = "59160575.go.buu.ac.th"
+            
+            function checkTrue(){
+                var lmail = document.getElementById("email").value;
+                if(email != lmail){
+                    document.getElementById("email").classList.add("is-danger");
+                    document.getElementById("help-mail").innerHTML = "This email is invalid";
+                }else{
+                     document.getElementById("email").classList.remove("is-danger");
+                     document.getElementById("noti").classList.add("notification");
+                     document.getElementById("noti").classList.add("is-primary");
+                     document.getElementById("help-mail").innerHTML = "";
+                      document.getElementById("noti").innerHTML = "The password was sent to the Email.";
+                     
+
+                }
+            }
+        </script>
+</body>
+</html>
